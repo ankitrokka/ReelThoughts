@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
                     
     
     
@@ -78,4 +79,12 @@
 
 
 
+=======
+    <wb-module deploy-name="ReelThoughts">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <property name="context-root" value="ReelThoughts"/>
+        <property name="java-output-path" value="/ReelThoughts/build/classes"/>
+    </wb-module>
+>>>>>>> f20155f5a621b8eed3f0828a057d5502bfc806b4
 </project-modules>
