@@ -37,15 +37,19 @@
 
   <!-- Static Movie Grid -->
   <div class="movie-grid">
-    <div class="movie-card">
-      <img class="movie-poster" src="images.jpeg" alt="The Dark Knight">
-      <div class="movie-content">
-        <div class="movie-title">The Dark Knight</div>
-        <div class="movie-genre">Action, Crime, Drama</div>
-        <div class="movie-rating">★ 9.0 <span class="stars">★★★★☆</span></div>
+    <!-- The Dark Knight card with link -->
+    <a href="${pageContext.request.contextPath}/darkknight.jsp" style="text-decoration: none; color: inherit;">
+      <div class="movie-card">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="The Dark Knight">
+        <div class="movie-content">
+          <div class="movie-title">The Dark Knight</div>
+          <div class="movie-genre">Action, Crime, Drama</div>
+          <div class="movie-rating">★ 9.0 <span class="stars">★★★★☆</span></div>
+        </div>
       </div>
-    </div>
+    </a>
 
+    <!-- Inception card -->
     <div class="movie-card">
       <img class="movie-poster" src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Inception">
       <div class="movie-content">
@@ -55,8 +59,9 @@
       </div>
     </div>
 
+    <!-- Interstellar card -->
     <div class="movie-card">
-      <img class="movie-poster" src="i.jpeg" alt="Interstellar">
+      <img class="movie-poster" src="https://m.media-amazon.com/images/I/81jLfEmwA7L._AC_SY679_.jpg" alt="Interstellar">
       <div class="movie-content">
         <div class="movie-title">Interstellar</div>
         <div class="movie-genre">Adventure, Drama, Sci-Fi</div>
@@ -64,8 +69,9 @@
       </div>
     </div>
 
+    <!-- The Shawshank Redemption card -->
     <div class="movie-card">
-      <img class="movie-poster" src="n.jpeg" alt="The Shawshank Redemption">
+      <img class="movie-poster" src="https://m.media-amazon.com/images/I/91Mi5nbzVQL._AC_SY679_.jpg" alt="The Shawshank Redemption">
       <div class="movie-content">
         <div class="movie-title">The Shawshank Redemption</div>
         <div class="movie-genre">Drama</div>
@@ -73,6 +79,7 @@
       </div>
     </div>
 
+    <!-- Pulp Fiction card -->
     <div class="movie-card">
       <img class="movie-poster" src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg" alt="Pulp Fiction">
       <div class="movie-content">
