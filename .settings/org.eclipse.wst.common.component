@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-            
-    
-    <wb-module deploy-name="firstclass">
-                        
-        
-        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                        
-        
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <dependent-module archiveName="mysql-connector-j-9.3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/Desktop/mysql-connector-j-9.3.0.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-                        
-        
-        <property name="context-root" value="firstclass"/>
-                        
-        
-        <property name="java-output-path" value="/firstclass/build/classes"/>
                     
     
-    </wb-module>
+    
+    
+    <wb-module deploy-name="ReelThoughts">
+                                        
         
+        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                                        
+        
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                        
+        
+        <dependent-module archiveName="mysql-connector-j-9.3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/ACER/Desktop/mysql-connector-j-9.3.0.jar">
+                                    
+            
+            <dependency-type>uses</dependency-type>
+                                
+        
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/Downloads/jar_files/jar_files/jakarta.servlet.jsp.jstl-2.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.activation-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/Downloads/jar_files/jar_files/jakarta.activation-2.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet.jsp.jstl-api-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/Downloads/jar_files/jar_files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.servlet-api-5.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/Downloads/jar_files/jar_files/jakarta.servlet-api-5.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.xml.bind-api-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/Downloads/jar_files/jar_files/jakarta.xml.bind-api-3.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+                
+        <dependent-module archiveName="jakarta.el-api-4.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/Downloads/jar_files/jar_files/jakarta.el-api-4.0.0.jar">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+        <dependent-module archiveName="jakarta.servlet.jsp-api-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/asus/OneDrive/Desktop/jakarta.servlet.jsp-api-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                                        
+        
+        
+        
+        <property name="java-output-path" value="/ReelThoughts/build/classes"/>
+                
+        <property name="context-root" value="ReelThoughts"/>
+                                    
+    
+    
+    
+    </wb-module>
+                
+
+
 
 </project-modules>
