@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movies</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #169976;
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #ffffff;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    .search-bar {
+      flex: 1;
+      max-width: 400px;
+      margin: 0 2rem;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    h1 {
+      text-align: center;
+      color: #f5c518;
+      margin: 40px 0 20px;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .movie-card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.03);
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .movie-content {
+      padding: 15px;
+    }
+
+    .movie-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+
+    .movie-genre {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    .movie-rating {
+      color: #f5c518;
+      font-weight: bold;
+    }
+
+    .stars {
+      color: gold;
+    }
+
+    @media (max-width: 600px) {
+      .movie-content {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">ReelThoughts.</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search movies..." id="searchInput">
+      </div>
+      <div class="nav-links">
+        <a href="#">Recent Releases</a>
+        <a href="#">Popular</a>
+        <a href="#">News</a>
+        <a href="userprofile.jsp"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <h1>🎬 Movies</h1>
+
+  <div class="movie-grid" id="movieGrid">
+    <!-- JavaScript will inject movie cards here -->
+  </div>
+
+  <!-- JavaScript to Render Movies and Handle Search -->
+  <script>
+    const movies = [
+      {
+        title: "The Dark Knight",
+        genre: "Action, Crime, Drama",
+        rating: "9.0",
+        stars: "★★★★☆",
+        img: "images.jpeg",
+        link: "movie1.html"
+      },
+      {
+        title: "Inception",
+        genre: "Action, Sci-Fi, Thriller",
+        rating: "8.8",
+        stars: "★★★★☆",
+        img: "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg"
+      },
+      {
+        title: "Interstellar",
+        genre: "Adventure, Drama, Sci-Fi",
+        rating: "8.6",
+        stars: "★★★★☆",
+        img: "i.jpeg"
+      },
+      {
+        title: "The Shawshank Redemption",
+        genre: "Drama",
+        rating: "9.3",
+        stars: "★★★★★",
+        img: "n.jpeg"
+      },
+      {
+        title: "Pulp Fiction",
+        genre: "Crime, Drama",
+        rating: "8.9",
+        stars: "★★★★☆",
+        img: "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg"
+      }
+    ];
+
+    const movieGrid = document.getElementById('movieGrid');
+
+    // Render all movie cards
+    movies.forEach(movie => {
+      const card = document.createElement('div');
+      card.className = 'movie-card';
+
+      const content = `
+        ${movie.link ? `<a href="${movie.link}" style="text-decoration: none; color: inherit;">` : ''}
+          <img class="movie-poster" src="${movie.img}" alt="${movie.title}">
+          <div class="movie-content">
+            <div class="movie-title">${movie.title}</div>
+            <div class="movie-genre">${movie.genre}</div>
+            <div class="movie-rating">★ ${movie.rating} <span class="stars">${movie.stars}</span></div>
+          </div>
+        ${movie.link ? `</a>` : ''}
+      `;
+
+      card.innerHTML = content;
+      movieGrid.appendChild(card);
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        const query = searchInput.value.trim().toLowerCase();
+        const found = movies.find(movie => movie.title.toLowerCase() === query);
+
+        if (found && found.link) {
+          window.location.href = found.link;
+        } else {
+          alert('Movie not found or no link available.');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

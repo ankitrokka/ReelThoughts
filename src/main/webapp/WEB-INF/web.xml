@@ -8,6 +8,7 @@
     <display-name>firstclass</display-name>
 
     <welcome-file-list>
+   		 <welcome-file>pages/movie.jsp</welcome-file>
         <welcome-file>pages/login.jsp</welcome-file> <!-- Changed to login.jsp -->
         <welcome-file>pages/home.jsp</welcome-file>
         <welcome-file>index.html</welcome-file>
