@@ -2,6 +2,9 @@ package com.islington.model;
 
 import java.sql.Date;
 
+/**
+ * Represents a user in the system.
+ */
 public class UserModel {
     private int userId;
     private String firstName;
@@ -16,7 +19,7 @@ public class UserModel {
     public UserModel() {}
 
     public UserModel(String firstName, String lastName, String email, 
-                   String password, Date dob, String gender, String profileImagePath) {
+                     String password, Date dob, String gender, String profileImagePath) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -25,6 +28,7 @@ public class UserModel {
         this.gender = gender;
         this.profileImagePath = profileImagePath;
     }
+
     // Getters and Setters
     public int getUserId() {
         return userId;
